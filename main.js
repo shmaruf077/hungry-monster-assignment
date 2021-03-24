@@ -32,6 +32,13 @@ function getMealItems () {
 }
 
 searchBtn.addEventListener('click', getMealItems);
+document.getElementById("search-input").addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        getMealItems();
+      }
+    });
+
 
 
 function getDetails (event) {
